@@ -3,22 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Password Generator</title>
+
+    <style>
+      .container {
+        margin: 0 auto;
+        width: 600px;
+        text-align: center;
+      };
+
+      .passwordDisplay {
+        border: 2px solid black;
+        padding: 10px;
+      };
+    </style>
+
+    <script type="text/javascript" src="password-generator.js"></script>
+
+
   </head>
 
-  <style>
-    .container {
-      margin: 0 auto;
-      width: 600px;
-      text-align: center;
-    };
-
-    .passwordDisplay {
-      border: 2px solid black;
-      padding: 10px;
-    };
-  </style>
-
-  <script type="text/javascript" src="password-generator.js"></script>
 
   <body>
 
@@ -30,18 +33,18 @@
       </h3>
 
       <form class="passwordForm">
-        <input type="checkbox" id="symbol">Include Symbols</input>
-        <input type="checkbox" id="captial">Include Capital Letters</input><br><br>
-        <input type="text" id="passwordLength" placeholder="Length of Password"></input><br><br>
-        <button id="btn">Generate Password</button>
+        <input type="checkbox" id="symbol"/>Include Symbols
+        <input type="checkbox" id="captial" />Include Capital Letters<br><br>
+        <input type="text" id="passwordLengthInput" placeholder="Length of Password"/><br><br>
+        <button type="button" id="btn">Generate Password</button>
       </form> <!-- End Form -->
 
       <br><br>
       <h3>Copy the password below or click button below to copy.</h3>
-      <div class="passwordDisplay">
+      <div id="passwordDisplay" >
 
       </div>
-      <button id="copy">Copy to Clipboard</button>
+      <button id="copyBtn" data-copytarget="#passwordDisplay" >Copy to Clipboard</button>
     </div> <!-- END Container Div -->
 
   </body>
